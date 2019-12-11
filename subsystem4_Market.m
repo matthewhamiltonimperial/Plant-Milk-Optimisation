@@ -1,6 +1,12 @@
 clear
 clc
 
+%% Author: Matt Hamilton
+%% Date: 11/12/2019
+%% DE4 Optimisation
+
+%% Note: 2 csvs (Fat_Protein_Type and Optimisation_Main_2.0 are needed to run this script. 
+
 %% Read raw data from .csv file
 
 Fat = csvread('Fat_Protein_Type.csv',0,0,[0,0,3,0]);                        % [0g/8oz,2.5g/8oz,5g/8oz,8g/8oz]
