@@ -1,8 +1,6 @@
 # Plant-Milk-Optimisation
 Optimising environmental and nutritional outcomes of plant-based alternative milks
 
-Optimising environmental and nutritional outcomes of plant-based alternative milks
-
 The source code for each sub-system can be found in the respective branch.
 
 For subsystem 1 please download:
