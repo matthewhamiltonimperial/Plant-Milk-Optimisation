@@ -1,0 +1,54 @@
+%Inequality constraint constants
+a = 9;
+b = 0.3;
+c = 0.4;
+
+%Inequality constraints
+A =[-0.76-a -0.13-a 1.52-a 1.53-a
+    0.069-b 0.015-b 0.565-b 0.015-b
+    0.039-c 0.006-c -0.041-c -0.042-c];
+
+%Inequality constraints
+b = [0 0 0];
+
+%Equality constraints
+Aeq = [1 1 1 1];
+beq = [1];
+
+%Lowerbound
+lb=zeros(1,4);
+
+%Upperbound
+ub= [1,1,1,1];
+
+%Initial value x0
+x0 = [0.25,0.25,0.25,0.25];
+
+%sqp solution of f1: min1
+option = optimoptions(@fmincon, 'Algorithm', 'sqp', 'MaxIterations', 1000);
+min1 = fmincon(@my_fun,x0,A,b,Aeq,beq,lb,ub);
+
+%sqp solution of f2: min2
+option = optimoptions(@fmincon, 'Algorithm', 'sqp', 'MaxIterations', 1000);
+min2 = fmincon(@green_house,x0,A,b,Aeq,beq,lb,ub);
+
+%sqp solution of fobj: min_objective
+option = optimoptions(@fmincon, 'Algorithm', 'sqp', 'MaxIterations', 1000);
+min_objective = fmincon(@objective_function,x0,A,b,Aeq,beq,lb,ub);
+
+%Display sqp solution for f1
+disp('SQP solution for f1')
+disp(['solution 1: ' num2str(min1)])
+disp(['Resource coefficient 1: ' num2str(my_fun(min1))])
+
+%Display sqp solution for f2
+disp('SQP solution for f2')
+disp(['solution 2: ' num2str(min2)])
+disp(['Resource coefficient 2: ' num2str(my_fun(min2))])
+
+%Display sqp solution for f_obj
+disp('SQP solution for fobj')
+disp(['solution opt: ' num2str(min_objective)])
+disp(['Resource coefficient opt: ' num2str(material_usage(min_objective))])
+disp(['Green house opt: ' num2str(green_house(min_objective))])
+
