@@ -3,7 +3,7 @@ Optimising environmental and nutritional outcomes of plant-based alternative mil
 
 The source code for each sub-system can be found in the respective branch.
 
-For subsystem 1 (Justice) please download: 
+For subsystem 1 (Justice) please download: main.m (main file) and subsystemmultiobjective.m (the function file)
 
 For subsystem 2 (Yeonjin) please download:
 
