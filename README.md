@@ -3,7 +3,7 @@ Optimising environmental and nutritional outcomes of plant-based alternative mil
 
 The source code for each sub-system can be found in the respective branch.
 
-For subsystem 1 (Justice) please download:
+For subsystem 1 (Justice) please download: Nutrition.m (main file), the function files; max.m, lsq.m, goal.m, big_obj.m, and the excel table Matlab_data.xlsx. 
 
 For subsystem 2 (Yeonjin) please download:
 
